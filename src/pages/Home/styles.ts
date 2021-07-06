@@ -20,13 +20,16 @@ export const SearchSection = styled.div`
 
   label {
     margin-right: 1rem;
+    font-size: 1.4rem;
   }
 
   input {
-    height: 2rem;
+    height: 3rem;
     border-radius: 10px 0px 0px 10px;
     border: none;
     padding: .5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
 
     &:focus {
       outline: none;
@@ -38,9 +41,15 @@ export const Button = styled.button`
   border: none;
   width: 5rem;
   border-radius: 0 10px 10px 0;
-  height: 2rem;
+  height: 3rem;
   background-color: #f96604;
   color: #fff;
   cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  
+
+  &:hover {
+    filter: opacity(.8);
+  }
 
 `
