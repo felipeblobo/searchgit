@@ -1,9 +1,11 @@
 import React, { ChangeEvent, useState } from "react";
 import { Button, Container, SearchSection, Title } from "./styles";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 export default function Home() {
   const [gitUser, setGitUser] = useState<string>("");
+  const history = useHistory();
 
   function changingUser(event: ChangeEvent<HTMLInputElement>) {
     setGitUser(event.target.value);
@@ -14,12 +16,10 @@ export default function Home() {
       const response = await axios.get(
         `https://api.github.com/users/${gitUser}/repos`
       );
-      const repositories = response.data;
-      const repositoriesNames: string[] = [];
-      repositories.map((repository: any) => {
-        repositoriesNames.push(repository.name);
-      })     
-      localStorage.setItem("repositories", JSON.stringify(repositoriesNames));
+      const repositories = response.data;   
+      localStorage.setItem("repositories", JSON.stringify(repositories));
+      history.push('/repositories');
+
     } catch (error) {
       console.error(error);
     }

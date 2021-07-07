@@ -4,12 +4,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 960px;
+  max-width: 60rem;
   margin-top: 6rem;
 `
 
 export const Title = styled.h1`
   font-size: 2rem;
+  text-align: center;
 `
 
 export const SearchSection = styled.div`
@@ -39,13 +40,14 @@ export const SearchSection = styled.div`
 
 export const Button = styled.button`
   border: none;
-  width: 5rem;
+  max-width: 5rem;
   border-radius: 0 10px 10px 0;
   height: 3rem;
   background-color: #f96604;
   color: #fff;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
+  padding: .5rem;
   
 
   &:hover {
