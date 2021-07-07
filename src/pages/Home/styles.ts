@@ -1,17 +1,23 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+export const StyledMain = styled.main`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`;
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   max-width: 60rem;
   margin-top: 6rem;
-`
+  flex: 1;
+`;
 
 export const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
-`
+`;
 
 export const SearchSection = styled.div`
   margin-top: 4rem;
@@ -28,15 +34,15 @@ export const SearchSection = styled.div`
     height: 3rem;
     border-radius: 10px 0px 0px 10px;
     border: none;
-    padding: .5rem;
-    font-family: 'Poppins', sans-serif;
+    padding: 0.5rem;
+    font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
 
     &:focus {
       outline: none;
     }
   }
-`
+`;
 
 export const Button = styled.button`
   border: none;
@@ -46,12 +52,17 @@ export const Button = styled.button`
   background-color: #f96604;
   color: #fff;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  padding: .5rem;
-  
+  font-family: "Poppins", sans-serif;
+  padding: 0.5rem;
 
   &:hover {
-    filter: opacity(.8);
+    filter: opacity(0.8);
   }
+`;
 
-`
+export const Erro = styled.p`
+  margin-top: 1rem;
+  text-align: center;
+  color: #db3030;
+
+` ;
